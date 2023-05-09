@@ -1,7 +1,5 @@
 package com.mistertransfer.reports;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mistertransfer.reports.domain.ReceiptData;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -10,9 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import org.thymeleaf.context.WebContext;
-
-import java.util.Map;
 
 @RestController
 public class ReportController {
