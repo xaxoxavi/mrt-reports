@@ -3,28 +3,25 @@ package com.mistertransfer.reports;
 import com.mistertransfer.reports.domain.ReceiptData;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-@RestController
+@Controller
 public class ReportController {
 
-    @PostMapping("/generate/html")
-    public String generateTemplate(@RequestBody ReceiptData receiptData) {
-        Context context = new Context();
-        context.setVariable("receiptNumber", receiptData.getReceiptNumber());
-        context.setVariable("datePaid", receiptData.getDatePaid());
-        context.setVariable("locataList", receiptData.getLocataList());
-        context.setVariable("amount", receiptData.getAmount());
-        context.setVariable("currency", receiptData.getCurrency());
-        String html = new TemplateEngine().process("receipt-mailEN.html", context);
+    @GetMapping("/generate-receipt")
+    public ModelAndView generateReceipt(@ModelAttribute ReceiptData receiptData) {
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.TEXT_HTML);
-        return html;
+        ModelAndView modelAndView = new ModelAndView("receipt-template");
+        modelAndView.addObject("receiptNumber", receiptData.getReceiptNumber());
+        modelAndView.addObject("datePaid", receiptData.getDatePaid());
+        modelAndView.addObject("locataList", receiptData.getLocataList());
+        modelAndView.addObject("amount", receiptData.getAmount());
+        modelAndView.addObject("currency", receiptData.getCurrency());
+
+        return modelAndView;
     }
-
 }
