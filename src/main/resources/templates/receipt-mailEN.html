@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout/email}">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
     <title></title>
     <!--[if mso]>
     <noscript>
@@ -29,13 +27,11 @@
       td {
         border: 0px solid #000000 !important;
       }
-
     </style>
 </head>
 
 <body style="margin: 0; padding: 0">
-<table role="presentation"
-       style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0; background: #ffffff">
+<table role="presentation" style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0; background: #ffffff">
     <tr>
         <td align="center" style="padding: 0">
             <!--body-->
@@ -77,7 +73,7 @@
                                         <tr style="border: 1px solid #cccccc">
                                             <td style="width: 260px; padding: 10px; vertical-align: top; text-align: center">
                                                 <!--Column 1-->
-                                                <h3>Receipt Number: <span th:text="${receipt-number}"></span></h3>
+                                                <h3>Receipt Number: <span th:text="${receiptNumber}">#{receipt-number}</span></h3>
                                             </td>
                                         </tr>
                                     </table>
@@ -93,4 +89,58 @@
                                             style="width: 100%; border-collapse: collapse; border: 1px solid #cccccc; border-spacing: 5px"
                                     >
                                         <tr>
+                                            <td>
+                                                <h4 style="color: #78b632">SUMMARY</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; vertical-align: top">
+                                                <span style="color: #78b632; font-weight: bold">Date Paid:</span>
+                                            </td>
+                                            <td style="padding: 10px; vertical-align: top" th:text="${datePaid}">{date-paid}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; vertical-align: top">
+                                                <span style="color: #78b632; font-weight: bold">Concept:</span>
+                                            </td>
+                                            <td style="padding: 10px; vertical-align: top">Payment to MisterTransfer.com bookings: <span th:text="${locataList}">{locata-list}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; vertical-align: top">
+                                                <span style="color: #78b632; font-weight: bold">Total amount paid:</span>
+                                            </td>
+                                            <td style="padding: 10px; vertical-align: top"><span th:text="${amount}">{amount}</span> <span th:text="${currency}">{currency}</span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <td style="padding: 20px; background: #323232">
+                                    <!--Footer-->
+                                    <table role="presentation" style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0">
+                                        <tr>
+                                            <td align="left">
+                                                <p style="color: white">
+                                                    BOOKINADVANCE S.L. CIF B01619477 <br />
+                                                    Gremi Fusters, 33 oficina 101 CP 07009 Palma de Mallorca (España)
+                                                </p>
+                                            </td>
+
+                                            <td style="padding: 0" align="right">
+                                                <!--Left Column-->
+                                                <p style="color: white">&reg; MisterTransfer</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
