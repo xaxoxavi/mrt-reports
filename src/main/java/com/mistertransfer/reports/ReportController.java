@@ -13,7 +13,7 @@ import org.thymeleaf.context.Context;
 public class ReportController {
 
     @GetMapping("/generate-receipt")
-    public ModelAndView generateReceipt(@ModelAttribute ReceiptData receiptData) {
+    public ModelAndView generateReceipt(@RequestBody ReceiptData receiptData) {
 
         ModelAndView modelAndView = new ModelAndView("receipt-template");
         modelAndView.addObject("receiptNumber", receiptData.getReceiptNumber());

@@ -1,0 +1,30 @@
+
+logging:
+  level:
+    root: DEBUG
+
+
+spring:
+  application:
+    name: mrtreports
+  output:
+    ansi:
+      enabled: always
+
+security:
+  secret: ZDY1OWZiYmZlYTIxMjkzMjZlMTI5YzMwODAzNmUzNDZmMDhiOWIyMTAyNjMyZGQ5ZGExYjU4NmIxOTE3NTgxOGYzN2UyZjc5YTU4N2VmNTMyOGRkNjg3MWNmNDUwMjVjYmFkMDg4YTNiODIwMjJhYTUzMTcwZDI1NTc3NmVmMWM=
+  tokenValidityInSeconds: 86400
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    allow-credentials: false
+    max-age: 1800
+
+client:
+  authentication:
+    user: admin
+    pass: T@3L!axzP0Ll4
+  url:
+    base: http://localhost:9080/services
+    authenticate: http://localhost:9080/api/authenticate
