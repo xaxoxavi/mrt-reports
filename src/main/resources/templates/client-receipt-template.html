@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title></title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+</head>
+<style>
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-8q6p{border-color:inherit;color:#31A56D;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-irab{background-color:#EFEFEF;border-color:inherit;color:#424242;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-jlgp{background-color:#EFEFEF;border-color:inherit;color:#31A56D;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-t361{background-color:#666;border-color:inherit;font-size:26px;text-align:right;vertical-align:top}
+.tg .tg-a2wq{background-color:#EEECEC;border-color:inherit;color:#222;font-size:24px;text-align:left;vertical-align:middle}
+.tg .tg-r4xy{background-color:#c8efd1;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-9810{border-color:inherit;color:#424242;text-align:left;vertical-align:top}
+.tg .tg-ats7{background-color:#FFF;border-color:inherit;color:#222;text-align:left;vertical-align:top}
+.tg .tg-jdph{background-color:#EEECEC;border-color:inherit;color:#222;text-align:left;vertical-align:top}
+</style>
+<body>
+<table class="tg">
+    <thead>
+    <tr>
+        <th class="tg-r4xy" colspan="4"><br><img src="" alt="Image" width="599" height="111"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-fymr" colspan="4"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Reservation reference number</span><span style="font-weight:700;font-style:normal;text-decoration:none;color:#424242;background-color:transparent">: </span><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent" th:text="${reservation_reference_number}"></span></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p" colspan="4"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Thank you for booking with MisterTransfer! </span><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent" th:text="${passenger_name}"></span><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent" th:text="${phone_number}"></span></td>
+    </tr>
+    <tr>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="tg-fymr"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Pickup Information:</span></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="tg-jlgp"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Pickup date and time:</span></td>
+        <td class="tg-irab"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${pickup_date_and_time}"></span></td>
+        <td class="tg-0pky" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Meet and Greet:</span></td>
+        <td class="tg-9810" colspan="3"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${meet_and_greet}"></span></td>
+    </tr>
+    <tr>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Flight date and time:</span></td>
+        <td class="tg-9810"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${flight_date_and_time}"></span></td>
+        <td class="tg-0pky" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Pickup Point:</span></td>
+        <td class="tg-9810"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${pickup_point}"></span></td>
+        <td class="tg-0pky" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Drop off:</span></td>
+        <td class="tg-9810" colspan="3"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${drop_off}"></span></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Drop off address:</span></td>
+        <td class="tg-9810" colspan="3"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${drop_off_address}"></span></td>
+    </tr>
+    <tr>
+        <td class="tg-0pky" colspan="4"></td>
+    </tr>
+    <tr>
+        <td class="tg-fymr" colspan="4"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Transfer details:</span></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Passengers:</span></td>
+        <td class="tg-ats7" colspan="3">
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF" th:text="${passengers.adults}"></span><span> adult(s)</span><br>
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF" th:text="${passengers.children}"></span><span> children</span><br>
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF" th:text="${passengers.infants}"></span><span> infant(s)</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Included luggage:</span></td>
+        <td class="tg-ats7" colspan="3"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#FFF" th:text="${included_luggage}"></span></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Vehicle: </span></td>
+        <td class="tg-9810" colspan="3">
+            <img src="" width="258" height="172"><br>
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${vehicle}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Extras:</span></td>
+        <td class="tg-9810" colspan="3">
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${extras[0]}"></span><br>
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${extras[1]}"></span><br>
+            <span style="font-weight:400;font-style:normal;text-decoration:none;color:#424242;background-color:transparent" th:text="${extras[2]}"></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">Cancellation Policy:</span></td>
+        <td class="tg-jdph" colspan="3"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#222;background-color:#EEECEC">Puede cancelar la reserva hasta 24 horas antes de la fecha de recogida. Para cancelar la reserva envie un correo electrónico a: support@mistertransfer.com</span></td>
+    </tr>
+    <tr>
+        <td class="tg-8q6p"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#31A56D;background-color:transparent">WhatsApp Channel:</span></td>
+        <td class="tg-a2wq" colspan="3">
+            <img src="" alt="Image" width="35" height="35">
+            <a href="https://dqcigz5d.r.eu-west-1.awstrack.me/L0/https:%2F%2Fwa.me%2F%2B34628746023/1/01020187a2b5931f-91288301-d728-4821-aa11-e8ba9b4928cf-000000/Tku4MIqXzsn2cMU5dyL_lxRBK4I=318" target="_blank" rel="noopener noreferrer">
+                <span style="font-weight:700;color:#78B632;background-color:#EEECEC">#0034 628 74 60 23</span>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky" colspan="3"></td>
+    </tr>
+    <tr>
+        <td class="tg-t361" colspan="4"><br><span style="font-weight:700;font-style:normal;text-decoration:none;color:#F3F3F3;background-color:transparent">MisterTransfer</span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
