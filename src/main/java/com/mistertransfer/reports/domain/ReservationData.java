@@ -17,8 +17,6 @@ public class ReservationData {
     private String includedLuggage;
     private String vehicle;
     private String[] extras;
-    private String cancellationPolicy;
-    private String whatsappChannel;
 
     @Data
     public static class Passengers {

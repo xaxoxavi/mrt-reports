@@ -38,8 +38,6 @@ public class ReportController {
         modelAndView.addObject("includedLuggage", data.getIncludedLuggage());
         modelAndView.addObject("vehicle", data.getVehicle());
         modelAndView.addObject("extras", data.getExtras());
-        modelAndView.addObject("cancellationPolicy", data.getCancellationPolicy());
-        modelAndView.addObject("whatsappChannel", data.getWhatsappChannel());
 
         return modelAndView;
     }
